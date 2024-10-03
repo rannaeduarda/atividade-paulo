@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Ingressos de Cinema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Compra de Ingressos de Cinema</h1>
+    </header>
+    
+    <main>
+        <section class="filmes">
+            <h2>Filmes em Cartaz</h2>
+            <div class="filme">
+                <h3>O Grande Show</h3>
+                <p>Data: 10/10/2024</p>
+                <p>Horário: 19:00</p>
+                <button onclick="openForm('O Grande Show')">Comprar Ingresso</button>
+            </div>
+            <div class="filme">
+                <h3>A Aventura Espacial</h3>
+                <p>Data: 11/10/2024</p>
+                <p>Horário: 21:00</p>
+                <button onclick="openForm('A Aventura Espacial')">Comprar Ingresso</button>
+            </div>
+        </section>
+        
+        <div id="formModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeForm()">&times;</span>
+                <h2>Comprar Ingresso para <span id="filmeNome"></span></h2>
+                <form id="purchaseForm" onsubmit="handleSubmit(event)">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" required>
+                    <button type="submit">Confirmar Compra</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Cinema Online. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
